@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="<%- theme.direction || "ltr" %>"
+      data-theme="<%= theme.style %>"
+      style="
+              --theme-light-main: <%- theme.light.theme_color %>;
+              --theme-light-main-dim: <%- pSBC(.3, theme.light.theme_color, theme.light.background_color) %>;
+              --theme-light-text: <%- theme.light.text_color %>;
+              --theme-light-text-dim: <%- pSBC(.3, theme.light.text_color, theme.light.background_color) %>;
+              --theme-light-background: <%- theme.light.background_color %>;
+
+              --theme-dark-main: <%- theme.dark.theme_color %>;
+              --theme-dark-main-dim: <%- pSBC(.4, theme.dark.theme_color, theme.dark.background_color) %>;
+              --theme-dark-text: <%- theme.dark.text_color %>;
+              --theme-dark-text-dim: <%- pSBC(.3, theme.dark.text_color, theme.dark.background_color) %>;
+              --theme-dark-background: <%- theme.dark.background_color %>;
+              ">
+<%- partial('_partial/head') %>
+<body>
+<div id="content-container">
+    <%- partial('_partial/header') %>
+    <div id="content-body">
+        <%- body %>
+    </div>
+    <%- partial('_partial/footer') %>
+</div>
+<% if (theme.back_to_top.enabled) { %>
+    <%- partial('_widget/back_to_top') %>
+<% } %>
+</body>
+</html>

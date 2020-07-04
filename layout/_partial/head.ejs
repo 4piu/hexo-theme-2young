@@ -1,0 +1,41 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="">
+    <% if (theme.favicon) { %>
+        <%- favicon_tag(theme.favicon) %>
+    <% } %>
+    <% if (theme.manifest) { %>
+        <link rel="manifest" href="<%- url_for(theme.manifest) %>">
+    <% } %>
+    <%- css("css/style.css") %>
+    <% if (is_post()) { %>
+        <%- css("css/post.css") %>
+        <link id="css-highlight-light" rel="preload" href="<%- url_for(theme.light.code_highlight_css) %>"
+              as="style" onload="this.rel='stylesheet'">
+        <link id="css-highlight-dark" rel="preload" href="<%- url_for(theme.dark.code_highlight_css) %>" as="style"
+              onload="this.rel='stylesheet'">
+    <% } %>
+    <%- js("js/main.js") %>
+    <%
+    var title = page.title;
+    if (is_archive()) {
+        title = titlecase(__('archive'));
+        if (is_month()) {
+            title += ': ' + page.year + '/' + page.month;
+        } else if (is_year()) {
+            title += ': ' + page.year;
+        }
+    } else if (is_category()) {
+        title = titlecase(__('category')) + ': ' + page.category;
+    } else if (is_tag()) {
+        title = titlecase(__('tag')) + ': ' + page.tag;
+    }
+    %>
+    <title>
+        <% if (title){ %><%= title %> |
+        <% } %>
+        <%= config.title %>
+    </title>
+</head>

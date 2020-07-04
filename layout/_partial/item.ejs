@@ -1,0 +1,27 @@
+<div class="archive-item">
+    <a class="anchor" href="<%- post.link || url_for(post.path) %>"></a>
+    <div class="meta">
+        <div class="date">
+            <%- full_date(post.date, theme.date_format.index || config.date_format) %>
+        </div>
+        <div class="tag">
+            <% post.tags.each(tag => { %>
+                <a href="<%- url_for(tag.path) %>">
+                    #<%- tag.name %>
+                </a>
+            <% }) %>
+        </div>
+    </div>
+    <div class="title">
+        <% if (theme.title_case) { %>
+            <%- titlecase(post.title)%>
+        <% } else { %>
+            <%- post.title %>
+        <% } %>
+    </div>
+    <% if (theme.excerpt && !is_archive()) { %>
+        <div class="excerpt">
+            <%- post.excerpt %>
+        </div>
+    <% } %>
+</div>

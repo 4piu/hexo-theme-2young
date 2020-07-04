@@ -1,0 +1,11 @@
+<div id="copyright-warning">
+    <div>
+        <%- titlecase(__('post_author')) %>: <%- page.author || theme.author.name || config.author %>
+    </div>
+    <div>
+        <%- titlecase(__('post_license')) %>: <%- page.license || theme.copyright.license %>
+    </div>
+    <div>
+        <%- titlecase(__('post_url')) %>: <a href="<%- page.permalink %>"><%- page.permalink %></a>
+    </div>
+</div>
