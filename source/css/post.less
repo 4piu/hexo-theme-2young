@@ -1,0 +1,144 @@
+// post/page content style sheet
+
+@mobile: ~"(max-width: 425px)";
+@tablet: ~"(max-width: 728px)";
+@dark: ~":root[data-theme='dark']";
+@light: ~":root[data-theme='light']";
+@rtl: ~":root[dir='rtl']";
+
+#header {
+  .header-info {
+    padding: 0 2rem 1rem 2rem!important;
+    cursor: default;
+    line-height: 1.5!important;
+
+    #post-header-title {
+      align-self: center;
+      font-size: xx-large;
+      margin: 1rem;
+    }
+
+    #post-header-date {
+      text-align: end;
+    }
+
+    #post-header-word-count {
+      text-align: end;
+      font-size: small;
+    }
+  }
+}
+
+#post-content {
+  margin-bottom: 4rem;
+
+  & > * {
+    overflow: auto;
+  }
+
+  a {
+    @{light} & {
+      color: var(--theme-light-main);
+    }
+
+    @{dark} & {
+      color: var(--theme-dark-main);
+    }
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+
+  figure {
+    margin: 1.5rem;
+  }
+
+  img {
+    max-width: 90%;
+    display: block;
+    margin: auto;
+  }
+
+  .highlight .gutter {
+    @{light} & {
+      color: var(--theme-light-text-dim);
+    }
+
+    @{dark} & {
+      color: var(--theme-dark-text-dim);
+    }
+  }
+
+  code {
+    border-radius: 5px;
+    direction: ltr;
+  }
+}
+
+#post-paginator {
+  display: flex;
+  margin: 2rem 0;
+  font-size: large;
+
+  @{light} & {
+    color: var(--theme-light-main-dim);
+  }
+
+  @{dark} & {
+    color: var(--theme-dark-main-dim);
+  }
+
+  & > *:hover {
+    @{light} & {
+      color: var(--theme-light-main);
+    }
+
+    @{dark} & {
+      color: var(--theme-dark-main);
+    }
+  }
+
+  & > * {
+    color: inherit;
+    transition: color .3s;
+  }
+
+  .nav-arrow {
+    font-size: x-large;
+  }
+
+  #nav-post-prev {
+    margin-right: auto;
+    text-decoration: none;
+    text-align: left;
+
+    @{rtl} & {
+      margin-left: auto;
+      margin-right: unset;
+      text-align: right;
+    }
+  }
+
+  #nav-post-next {
+    margin-left: auto;
+    text-decoration: none;
+    text-align: right;
+
+    @{rtl} & {
+      margin-left: unset;
+      margin-right: auto;
+      text-align: left;
+    }
+  }
+}
+
+#post-outdate-warning {
+  font-size: small;
+  color: #e3af00;
+  background: rgba(255, 214, 0, 0.2);
+  border: solid 2px #e3af00;
+  border-radius: 1rem;
+  padding: .5rem;
+  margin-bottom: 2rem;
+}

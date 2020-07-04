@@ -1,0 +1,104 @@
+#header .header-info {
+  padding: 0 2rem 1rem 2rem!important;
+  cursor: default;
+  line-height: 1.5 !important;
+}
+#header .header-info #post-header-title {
+  align-self: center;
+  font-size: xx-large;
+  margin: 1rem;
+}
+#header .header-info #post-header-date {
+  text-align: end;
+}
+#header .header-info #post-header-word-count {
+  text-align: end;
+  font-size: small;
+}
+#post-content {
+  margin-bottom: 4rem;
+}
+#post-content > * {
+  overflow: auto;
+}
+:root[data-theme='light'] #post-content a {
+  color: var(--theme-light-main);
+}
+:root[data-theme='dark'] #post-content a {
+  color: var(--theme-dark-main);
+}
+#post-content p {
+  margin: 1rem 0;
+}
+#post-content figure {
+  margin: 1.5rem;
+}
+#post-content img {
+  max-width: 90%;
+  display: block;
+  margin: auto;
+}
+:root[data-theme='light'] #post-content .highlight .gutter {
+  color: var(--theme-light-text-dim);
+}
+:root[data-theme='dark'] #post-content .highlight .gutter {
+  color: var(--theme-dark-text-dim);
+}
+#post-content code {
+  border-radius: 5px;
+  direction: ltr;
+}
+#post-paginator {
+  display: flex;
+  margin: 2rem 0;
+  font-size: large;
+}
+:root[data-theme='light'] #post-paginator {
+  color: var(--theme-light-main-dim);
+}
+:root[data-theme='dark'] #post-paginator {
+  color: var(--theme-dark-main-dim);
+}
+:root[data-theme='light'] #post-paginator > *:hover {
+  color: var(--theme-light-main);
+}
+:root[data-theme='dark'] #post-paginator > *:hover {
+  color: var(--theme-dark-main);
+}
+#post-paginator > * {
+  color: inherit;
+  transition: color 0.3s;
+}
+#post-paginator .nav-arrow {
+  font-size: x-large;
+}
+#post-paginator #nav-post-prev {
+  margin-right: auto;
+  text-decoration: none;
+  text-align: left;
+}
+:root[dir='rtl'] #post-paginator #nav-post-prev {
+  margin-left: auto;
+  margin-right: unset;
+  text-align: right;
+}
+#post-paginator #nav-post-next {
+  margin-left: auto;
+  text-decoration: none;
+  text-align: right;
+}
+:root[dir='rtl'] #post-paginator #nav-post-next {
+  margin-left: unset;
+  margin-right: auto;
+  text-align: left;
+}
+#post-outdate-warning {
+  font-size: small;
+  color: #e3af00;
+  background: rgba(255, 214, 0, 0.2);
+  border: solid 2px #e3af00;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+/*# sourceMappingURL=post.css.map */

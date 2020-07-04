@@ -1,0 +1,8 @@
+{
+  "name": "hexo-theme-2simple",
+  "version": "1.0.0",
+  "description": "A simple hexo theme",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {}
+}
