@@ -1,5 +1,37 @@
 title: "2 Young" # title, default to config.title
 subtitle: "Example page to test the theme"  # subtitle, default to use config.subtitle
+title_case: true
+excerpt: true
+word_count: true
+favicon: "assets/favicon.ico"
+manifest: #"assets/site.webmanifest"
+direction: "ltr"
+rss: "//blog.skk.moe/atom.xml"
+
+author:
+  enabled: true
+  name: # default to config.author
+  bio: "A newbie learns to code. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elit felis, placerat sit amet nisl eu, viverra posuere nisl. " # default to config.description
+  avatar: "assets/avatar.jpg" # default to gravatar > assets/avatar.jpg
+
+social:
+  show_in_footer: true
+  show_in_author_widget: true
+  email: "mailto:liame@example.com"
+  github: "//github.com/torvalds"
+  stackoverflow: "//stackoverflow.com/u/22656"
+  twitter: "//twitter.com/Twitter"
+  facebook: "//facebook.com/facebook"
+  instagram: "//instagram.com/natgeo"
+  whatsapp: "//wa.me/3194657728"
+  wechat: "//via.placeholder.com/200x200?text=WeChat+QR"
+  qq: "//wpa.qq.com/msgrd?uin=1145141919"
+  steam: "//steamcommunity.com/id/zenoxio"
+  psn: "//psnprofiles.com/Hakoom"
+  xbox: "//account.xbox.com/profile?gamertag=Xonatron"
+  twitch: "//twitch.tv/20musiclive"
+  youtube: "//www.youtube.com/channel/UCZCFT11CWBi3MHNlGf019nw"
+  bilibili: "//space.bilibili.com/481701670"
 
 style: "auto" # 'auto', 'light', 'dark'
 
@@ -23,32 +55,6 @@ dark:
   footer_css: "color:white!important;"
   code_highlight_css: "//cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/monokai.min.css" # set config.highlight.hljs to true
 
-title_case: true
-excerpt: true
-word_count: true
-favicon: "assets/favicon.ico"
-manifest: #"assets/site.webmanifest"
-direction: "ltr"
-rss: "//blog.skk.moe/atom.xml"
-
-nav:
-  archives:
-    enabled: true
-    url: "archives/"
-  categories:
-    enabled: true
-    url: "categories/"
-  tags:
-    enabled: true
-    url: "tags/"
-  about:
-    enabled: true
-    url: "about/"
-  friends:
-    enabled: true
-    url: "friends/"
-
-
 date_format:
   index: "YYYY-MM-DD"
   post: "MMM Do YYYY"
@@ -71,30 +77,30 @@ back_to_top:
 style_toggle:
   enabled: true
 
-author:
-  enabled: true
-  name: # default to config.author
-  bio: "A newbie learns to code" # default to config.description
-  avatar: "assets/avatar.jpg"
+nav:
+  archives:
+    enabled: true
+    url: "archives/"
+  categories:
+    enabled: true
+    url: "categories/"
+  tags:
+    enabled: true
+    url: "tags/"
+  about:
+    enabled: true
+    url: "about/"
+  friends:
+    enabled: true
+    url: "friends/"
 
-social:
-  show_in_footer: true
-  show_in_author_widget: true
-  email: "mailto:liame@example.com"
-  github: "//github.com/torvalds"
-  stackoverflow: "//stackoverflow.com/u/22656"
-  twitter: "//twitter.com/Twitter"
-  facebook: "//facebook.com/facebook"
-  instagram: "//instagram.com/natgeo"
-  whatsapp: "//wa.me/3194657728"
-  wechat: "//via.placeholder.com/200x200?text=WeChat+QR"
-  qq: "//wpa.qq.com/msgrd?uin=1145141919"
-  steam: "//steamcommunity.com/id/zenoxio"
-  psn: "//psnprofiles.com/Hakoom"
-  xbox: "//account.xbox.com/profile?gamertag=Xonatron"
-  twitch: "//twitch.tv/20musiclive"
-  youtube: "//www.youtube.com/channel/UCZCFT11CWBi3MHNlGf019nw"
-  bilibili: "//space.bilibili.com/481701670"
+library:
+  fontawesome: "//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"
+  jquery: "//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"
+  fancybox:
+    enabled: true
+    css: "//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"
+    js: "//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js"
 
 tagcloud:
   enabled: true
@@ -113,11 +119,3 @@ outdate_warning: # show warning if post older than specified days
 
 comment:
   disqus: #"nobody-65534"
-
-library:
-  fontawesome: "//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"
-  jquery: "//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"
-  fancybox:
-    enabled: true
-    css: "//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"
-    js: "//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js"
