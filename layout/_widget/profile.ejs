@@ -1,0 +1,18 @@
+<%
+let avatarUrl;
+if (theme.author.avatar) {
+    avatarUrl = url_for(theme.author.avatar);
+} else if (theme.social.email) {
+    avatarUrl = gravatar(theme.social.email, 150);
+} else {
+    avatarUrl = url_for('assets/avatar.jpg');
+}
+%>
+<div id="widget-profile" class="panel-widget">
+    <img id="profile-avatar" src="<%- avatarUrl %>" alt="Author avatar"/>
+    <div id="profile-name"><%- theme.author.name || config.author %></div>
+    <div id="profile-bio"><%- theme.author.bio %></div>
+    <% if (theme.social.show_in_author_widget) { %>
+        <%- partial("_widget/social") %>
+    <% } %>
+</div>

@@ -17,6 +17,7 @@
 }
 #post-content {
   margin-bottom: 4rem;
+  max-width: 1024px;
 }
 #post-content > * {
   overflow: auto;
@@ -100,5 +101,9 @@
   border-radius: 1rem;
   padding: 0.5rem;
   margin-bottom: 2rem;
+}
+#toc {
+  position: sticky;
+  top: 0;
 }
 /*# sourceMappingURL=post.css.map */
