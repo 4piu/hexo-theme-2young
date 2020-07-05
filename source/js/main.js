@@ -57,3 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 "visible" : "hidden";
     });
 });
+
+// Fancybox
+const fancyboxImg = () => document.querySelectorAll("#post-content img")
+    .forEach(img => {
+        let anchorWrap = document.createElement("a");
+        anchorWrap.setAttribute("data-fancybox", "gallery");
+        anchorWrap.setAttribute("href", img.getAttribute("src"));
+        img.parentNode.insertBefore(anchorWrap, img);
+        anchorWrap.appendChild(img);
+    });

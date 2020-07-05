@@ -29,13 +29,7 @@
             {src: url_for(theme.library.fancybox.js), async: true}
         ]) %>
         <script>
-            document.querySelectorAll("#post-content img").forEach(img => {
-                let anchorWrap = document.createElement("a");
-                anchorWrap.setAttribute("data-fancybox", "gallery");
-                anchorWrap.setAttribute("href", img.getAttribute("src"));
-                img.parentNode.insertBefore(anchorWrap, img);
-                anchorWrap.appendChild(img);
-            });
+            fancyboxImg();
         </script>
     <% } %>
     <%# Custom script %>
