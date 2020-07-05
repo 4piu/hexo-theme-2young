@@ -58,30 +58,18 @@ body {
 body {
   height: 100%;
 }
-#content-container {
+#body-wrap {
   display: flex;
   flex-direction: column;
   min-height: 100%;
 }
-#content-container #content-body {
-  flex-grow: 1;
+#body {
+  display: flex;
+  margin: 4rem 0;
+  justify-content: center;
 }
-#content-wrap {
-  margin: 4rem auto;
-  padding: 0 4rem;
-  max-width: 1024px;
-}
-@media (max-width: 728px) {
-  #content-wrap {
-    margin: 4rem auto;
-    padding: 0 2rem;
-  }
-}
-@media (max-width: 425px) {
-  #content-wrap {
-    margin: 4rem auto;
-    padding: 0 1rem;
-  }
+#body > * {
+  min-width: 0;
 }
 #header #header-toolbar {
   user-select: none;
