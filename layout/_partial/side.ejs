@@ -1,0 +1,16 @@
+<% if (position === "left") { %>
+    <aside id="left-panel" class="side-panel">
+        <% if (theme.author.enabled && is_home()) { %>
+            <%- partial('_widget/profile') %>
+        <% } %>
+        <% if (theme.toc.enabled && is_post()) { %>
+            <div id="toc">
+                <%- toc(page.content) %>
+            </div>
+        <% } %>
+    </aside>
+<% } else if (position === "right") { %>
+    <aside id="right-panel" class="side-panel">
+
+    </aside>
+<% } %>

@@ -17,10 +17,16 @@
               ">
 <%- partial('_partial/head') %>
 <body>
-<div id="content-container">
+<div id="body-wrap">
     <%- partial('_partial/header') %>
-    <div id="content-body">
-        <%- body %>
+    <div id="body" class="flex-center flex-fill">
+        <div id="content-wrap">
+            <%- body %>
+        </div>
+        <% if (is_home() || is_post()) { %>
+            <%- partial('_partial/side', {position: "left"}) %>
+            <%- partial('_partial/side', {position: "right"}) %>
+        <% } %>
     </div>
     <%- partial('_partial/footer') %>
 </div>
