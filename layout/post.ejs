@@ -1,18 +1,15 @@
-<div id="content-wrap">
-    <div id="post-content">
-        <% if (theme.outdate_warning.enabled) { %>
-            <%- partial("_widget/outdate_warning") %>
-        <% } %>
-        <%- page.content %>
-        <% if (theme.copyright.enabled) { %>
-            <%- partial('_widget/copyright') %>
-        <% } %>
-    </div>
-    <% if (theme.paginator.show_in_post) { %>
-        <%- partial("_widget/post_paginator") %>
+<div id="post-content">
+    <% if (theme.outdate_warning.enabled) { %>
+        <%- partial("_widget/outdate_warning") %>
     <% } %>
-    <% if (page.comments) { %>
-        <%- partial('_widget/comment') %>
+    <%- page.content %>
+    <% if (theme.copyright.enabled) { %>
+        <%- partial('_widget/copyright') %>
     <% } %>
 </div>
-<% has_image(page.content) %>
+<% if (theme.paginator.show_in_post) { %>
+    <%- partial("_widget/post_paginator") %>
+<% } %>
+<% if (page.comments) { %>
+    <%- partial('_widget/comment') %>
+<% } %>
