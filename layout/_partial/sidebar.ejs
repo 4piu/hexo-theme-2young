@@ -1,5 +1,5 @@
 <% if (position === "left") { %>
-    <aside id="left-panel" class="side-panel">
+    <aside id="left-sidebar" class="sidebar">
         <% if (theme.author.enabled && is_home()) { %>
             <%- partial('_widget/profile') %>
         <% } %>
@@ -10,7 +10,7 @@
         <% } %>
     </aside>
 <% } else if (position === "right") { %>
-    <aside id="right-panel" class="side-panel">
+    <aside id="right-sidebar" class="sidebar">
 
     </aside>
 <% } %>

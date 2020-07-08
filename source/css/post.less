@@ -8,9 +8,9 @@
 
 #header {
   .header-info {
-    padding: 0 2rem 1rem 2rem!important;
+    padding: 0 2rem 1rem 2rem !important;
     cursor: default;
-    line-height: 1.5!important;
+    line-height: 1.5 !important;
 
     #post-header-title {
       align-self: center;
@@ -29,30 +29,95 @@
   }
 }
 
+#content-wrap {
+  max-width: 1024px !important;
+}
+
 #post-content {
   margin-bottom: 4rem;
-  max-width: 1024px;
+  padding: 0 2rem;
+  line-height: 2;
+  overflow-wrap: break-word;
 
-  & > * {
-    overflow: auto;
-  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bolder;
 
-  a {
-    @{light} & {
-      color: var(--theme-light-main);
+    .headerlink {
+      position: relative;
     }
 
-    @{dark} & {
-      color: var(--theme-dark-main);
+    .headerlink::before {
+      content: "§";
+      position: absolute;
+      right: .2rem;
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    &:hover .headerlink::before {
+      opacity: 1;
     }
   }
 
-  p {
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  del {
+    text-decoration: line-through;
+  }
+
+  ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 40px;
+    line-height: initial;
+  }
+
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+
+  kbd {
+    font-family: monospace;
+  }
+
+  dl, dt {
+    padding: 0;
+    margin-top: 16px;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 600;
+
+    dd {
+      padding: 0 16px;
+      margin-bottom: 16px;
+    }
+
+    pre {
+      padding: 10px;
+      overflow: auto;
+      font-size: 90%;
+      line-height: 1.8;
+      border-radius: 5px;
+    }
+  }
+
+  & > p {
     margin: 1rem 0;
   }
 
-  figure {
-    margin: 1.5rem;
+  & > figure {
+    margin: 1.5rem 0;
   }
 
   img {
@@ -61,25 +126,76 @@
     margin: auto;
   }
 
-  .highlight .gutter {
-    @{light} & {
-      color: var(--theme-light-text-dim);
+  & > hr {
+    opacity: .5;
+  }
+
+  & > table {
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    td, th {
+      padding: .4rem;
+      border: 1px solid #b4b4b4;
     }
 
-    @{dark} & {
-      color: var(--theme-dark-text-dim);
+    tr:nth-child(2n) {
+      background: rgba(205, 205, 205, .1);
+    }
+  }
+
+  & > blockquote {
+    padding: 1rem;
+    //color: #555;
+    border-left: .25em solid #b4b4b4;
+    background: rgba(205, 205, 205, .2);
+    border-radius: 3px;
+
+    footer > * {
+      margin-right: .5rem;
     }
   }
 
   code {
-    border-radius: 5px;
-    direction: ltr;
+    font-family: monospace;
+    &:not(.markdown, .hljs, .highlight) {
+      border-radius: .4rem;
+      padding: .2rem;
+      background: rgba(205, 205, 205, .2);
+    }
+  }
+
+  .highlight {
+    .gutter {
+      @{light} & {
+        color: var(--theme-light-text-dim);
+      }
+
+      @{dark} & {
+        color: var(--theme-dark-text-dim);
+      }
+    }
+
+    code {
+      border-radius: 5px;
+      direction: ltr;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      overflow: auto;
+    }
+
+    mark {
+      background: rgba(255, 255, 0, .5);
+    }
   }
 }
 
 #post-paginator {
   display: flex;
-  margin: 2rem 0;
+  margin: 2rem 1rem;
   font-size: large;
 
   @{light} & {
@@ -134,10 +250,10 @@
   }
 }
 
-#post-outdate-warning {
+#outdate-warning {
   font-size: small;
   color: #e3af00;
-  background: rgba(255, 214, 0, 0.2);
+  background: rgba(255, 214, 0, .1);
   border: solid 2px #e3af00;
   border-radius: 1rem;
   padding: .5rem;
@@ -146,5 +262,26 @@
 
 #toc {
   position: sticky;
-  top: 0;
+  top: 2rem;
+  margin: 1rem;
+  line-height: 1.5;
+
+  ol {
+    list-style: none;
+    padding-inline-start: .5rem;
+  }
+
+  li {
+    display: block;
+  }
+}
+
+#copyright-warning {
+  font-size: small;
+  color: #e3af00;
+  background: rgba(255, 214, 0, .1);
+  border: solid 2px #e3af00;
+  border-radius: 1rem;
+  padding: .5rem;
+  margin-top: 4rem;
 }

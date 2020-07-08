@@ -1,7 +1,7 @@
 title: "2 Young" # title, default to config.title
 subtitle: "Example page to test the theme"  # subtitle, default to use config.subtitle
 title_case: true
-excerpt: true
+excerpt: false
 word_count: true
 favicon: "assets/favicon.ico"
 manifest: #"assets/site.webmanifest"
@@ -11,7 +11,7 @@ rss: "//blog.skk.moe/atom.xml"
 author:
   enabled: true
   name: # default to config.author
-  bio: "A newbie learns to code. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elit felis, placerat sit amet nisl eu, viverra posuere nisl. " # default to config.description
+  bio: "*A newbie learns to code.* __Lorem ipsum__ dolor sit amet, [consectetur adipiscing](//hexo.io) elit. Sed elit felis, placerat sit amet nisl eu, viverra posuere nisl. " # default to config.description
   avatar: "assets/avatar.jpg" # default to gravatar > assets/avatar.jpg
 
 social:
@@ -36,7 +36,7 @@ social:
 style: "auto" # 'auto', 'light', 'dark'
 
 light:
-  theme_color: "#0ba29b"
+  theme_color: "#008e86"
   text_color: "#333"
   background_color: "#fff"
   header_image: "assets/header.jpg"
