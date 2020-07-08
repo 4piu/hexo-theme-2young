@@ -267,7 +267,7 @@ footer#footer {
   }
 
   #footer-signature {
-    margin: 2rem;
+    margin: 1rem;
 
     a {
       color: inherit;
@@ -606,4 +606,44 @@ footer#footer {
 
 .social-list {
   user-select: none;
+}
+
+ul.category-list {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  line-height: 1.5;
+  text-align: center;
+
+  ul {
+    padding-inline-start: 1rem;
+  }
+
+  li {
+    list-style-type: disc;
+  }
+
+  .category-list-count {
+    font-size: smaller;
+    vertical-align: top;
+    padding: 0 .4rem;
+
+    @{light} & {
+      color: var(--theme-light-text-dim);
+    }
+
+    @{dark} & {
+      color: var(--theme-dark-text-dim);
+    }
+  }
+}
+
+#tagcloud {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
 }
