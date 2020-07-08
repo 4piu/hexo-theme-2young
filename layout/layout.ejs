@@ -10,7 +10,7 @@
               --theme-light-background: <%- theme.light.background_color %>;
 
               --theme-dark-main: <%- theme.dark.theme_color %>;
-              --theme-dark-main-dim: <%- pSBC(.4, theme.dark.theme_color, theme.dark.background_color) %>;
+              --theme-dark-main-dim: <%- pSBC(.3, theme.dark.theme_color, theme.dark.background_color) %>;
               --theme-dark-text: <%- theme.dark.text_color %>;
               --theme-dark-text-dim: <%- pSBC(.3, theme.dark.text_color, theme.dark.background_color) %>;
               --theme-dark-background: <%- theme.dark.background_color %>;
@@ -24,8 +24,8 @@
             <%- body %>
         </div>
         <% if (is_home() || is_post()) { %>
-            <%- partial('_partial/side', {position: "left"}) %>
-            <%- partial('_partial/side', {position: "right"}) %>
+            <%- partial('_partial/sidebar', {position: "left"}) %>
+            <%- partial('_partial/sidebar', {position: "right"}) %>
         <% } %>
     </div>
     <%- partial('_partial/footer') %>
