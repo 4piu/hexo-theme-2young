@@ -1,0 +1,7 @@
+<% const postDate = page.date; %>
+<% const expiration = moment(postDate).add(parseInt(page.expiration || theme.outdated_warning.days), "days"); %>
+<% if (page.expiration !== -1 && moment().isAfter(expiration)) { %>
+    <div id="outdated-warning">
+        <%- __("outdated_warning", postDate.fromNow()); %>
+    </div>
+<% } %>
