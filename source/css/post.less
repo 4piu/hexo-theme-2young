@@ -158,7 +158,8 @@
 
   code {
     font-family: monospace;
-    &:not(.markdown, .hljs, .highlight) {
+
+    &:not(.markdown):not(.hljs):not(.highlight) {
       border-radius: .4rem;
       padding: .2rem;
       background: rgba(205, 205, 205, .2);
@@ -260,10 +261,9 @@
   margin-bottom: 2rem;
 }
 
-#toc {
+#widget-toc {
   position: sticky;
-  top: 2rem;
-  margin: 1rem;
+  top: 1rem;
   line-height: 1.5;
 
   ol {

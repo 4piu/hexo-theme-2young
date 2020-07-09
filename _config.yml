@@ -30,7 +30,7 @@ social:
 style: "auto" # 'auto', 'light', 'dark'
 
 light:
-  theme_color: "#008e86"
+  theme_color: "#005ca0"
   text_color: "#333"
   background_color: "#fff"
   header_image: "assets/header.jpg"
