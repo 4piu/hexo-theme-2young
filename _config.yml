@@ -90,7 +90,6 @@ sidebar:
     orderby: # order of categories, default is name
     order:  # sort of order. 1, asc for ascending; -1, desc for descending
     show_count: true  # show post count
-    depth: 0
 
   archive:
     enabled: true

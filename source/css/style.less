@@ -299,7 +299,6 @@ footer#footer {
 
 .sidebar {
   max-width: 15rem;
-  min-width: 15rem;
   flex-grow: 1;
   flex-shrink: 0;
 
@@ -572,6 +571,7 @@ footer#footer {
 
 .sidebar-widget {
   margin: 1rem 1.5rem 4rem 1.5rem;
+  min-width: 13rem;
 
   .widget-title {
     font-size: large;
@@ -582,17 +582,15 @@ footer#footer {
     display: block;
     margin: 1rem;
     padding-inline-start: 0;
-    position: relative;
 
     .archive-list-item, .category-list-item, .tag-list-item {
-      display: block;
+      display: flex;
+      justify-content: space-between;
       list-style-type: none;
-      position: relative;
       margin: 1rem 0;
+      word-break: break-word;
 
       .archive-list-count, .category-list-count, .tag-list-count {
-        position: absolute;
-        right: 0;
         font-size: small;
         padding: .1rem;
         border-radius: .2rem;
