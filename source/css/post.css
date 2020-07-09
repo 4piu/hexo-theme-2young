@@ -145,7 +145,7 @@
 #post-content code {
   font-family: monospace;
 }
-#post-content code:not(.markdown, .hljs, .highlight) {
+#post-content code:not(.markdown):not(.hljs):not(.highlight) {
   border-radius: 0.4rem;
   padding: 0.2rem;
   background: rgba(205, 205, 205, 0.2);
@@ -221,17 +221,16 @@
   padding: 0.5rem;
   margin-bottom: 2rem;
 }
-#toc {
+#widget-toc {
   position: sticky;
-  top: 2rem;
-  margin: 1rem;
+  top: 1rem;
   line-height: 1.5;
 }
-#toc ol {
+#widget-toc ol {
   list-style: none;
   padding-inline-start: 0.5rem;
 }
-#toc li {
+#widget-toc li {
   display: block;
 }
 #copyright-warning {

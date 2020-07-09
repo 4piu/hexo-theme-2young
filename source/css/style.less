@@ -63,7 +63,16 @@
 }
 
 .active-tab {
-  border-bottom: solid .1rem;
+  //border-bottom: solid .1rem;
+  font-weight: bold;
+
+  &:before {
+    content: "[";
+  }
+
+  &:after {
+    content: "]";
+  }
 }
 
 .no-select {
@@ -127,6 +136,14 @@ body {
   & > * {
     min-width: 0;
   }
+
+  @media @tablet {
+    margin: 3rem 0;
+  }
+
+  @media @mobile {
+    margin: 2rem 0;
+  }
 }
 
 #header {
@@ -168,7 +185,6 @@ body {
     }
 
     #style_toggle {
-      font-size: larger;
       cursor: pointer;
       filter: drop-shadow(0 0 4px);
 
@@ -289,6 +305,55 @@ footer#footer {
 
   @media @laptop {
     flex-grow: 0;
+  }
+}
+
+.sidebar-widget {
+  margin: 1rem 1.5rem 4rem 1.5rem;
+
+  .widget-title {
+    font-size: large;
+    font-weight: bold;
+  }
+
+  .archive-list, .category-list, .tag-list {
+    display: block;
+    margin: 1rem;
+    padding-inline-start: 0;
+    position: relative;
+
+    .archive-list-item, .category-list-item, .tag-list-item {
+      display: block;
+      list-style-type: none;
+      position: relative;
+      margin: 1rem 0;
+
+      .archive-list-count, .category-list-count, .tag-list-count {
+        position: absolute;
+        right: 0;
+        font-size: small;
+        padding: .1rem;
+        border-radius: .2rem;
+        vertical-align: baseline;
+        background: rgba(180, 180, 180, 0.2);
+
+        @{light} & {
+          color: var(--theme-light-text-dim);
+        }
+
+        @{dark} & {
+          color: var(--theme-dark-text-dim);
+        }
+      }
+
+      .category-list-child {
+        padding-inline-start: 0;
+      }
+    }
+  }
+
+  .tagcloud {
+    margin: 1rem;
   }
 }
 
@@ -557,7 +622,6 @@ footer#footer {
 #widget-profile {
   display: flex;
   flex-direction: column;
-  padding: 1rem 1.5rem;
 
   & > * {
     align-self: center;
@@ -614,7 +678,7 @@ footer#footer {
   user-select: none;
 }
 
-ul.category-list {
+#content-wrap .category-list {
   display: flex;
   justify-content: center;
   margin-block-start: 1rem;
@@ -636,7 +700,7 @@ ul.category-list {
   .category-list-count {
     font-size: smaller;
     vertical-align: top;
-    padding: 0 .4rem;
+    margin-left: .4rem;
 
     @{light} & {
       color: var(--theme-light-text-dim);
@@ -648,7 +712,7 @@ ul.category-list {
   }
 }
 
-#tagcloud {
+.tagcloud {
   display: flex;
   align-items: baseline;
   justify-content: space-evenly;

@@ -1,0 +1,7 @@
+<% const option = {
+    amount: theme.sidebar.tagcloud.amount
+} %>
+<div id="widget-tag" class="sidebar-widget">
+    <div class="widget-title"><%- titlecase(__("tag")) %></div>
+    <%- list_tags(option) %>
+</div>
