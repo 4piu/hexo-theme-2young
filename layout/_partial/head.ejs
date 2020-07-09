@@ -9,6 +9,7 @@
     <% if (theme.manifest) { %>
         <link rel="manifest" href="<%- url_for(theme.manifest) %>">
     <% } %>
+    <%- partial("_widget/analytics") %>
     <%- css("css/style.css") %>
     <% if (is_post()) { %>
         <%- css("css/post.css") %>

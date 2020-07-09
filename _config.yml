@@ -119,3 +119,6 @@ outdate_warning: # show warning if post older than specified days
 
 comment:
   disqus: #"nobody-65534"
+
+analytics:
+  google: #"UA-000000-2"
