@@ -1,13 +1,15 @@
 <footer id="footer">
     <style type="text/css">
         :root[data-theme="light"] #footer {
-        <% if (theme.light.footer_image) { %> background: url(<%- url_for(theme.light.footer_image) %>) no-repeat center;
+        <% if (theme.light.footer_image) { %>
+            background: url(<%- url_for(theme.light.footer_image) %>) no-repeat center;
             background-size: cover;
         <% } %><%- theme.light.footer_css %>
         }
 
         :root[data-theme="dark"] #footer {
-        <% if (theme.dark.footer_image) { %> background: url(<%- url_for(theme.dark.footer_image) %>) no-repeat center;
+        <% if (theme.dark.footer_image) { %>
+            background: url(<%- url_for(theme.dark.footer_image) %>) no-repeat center;
             background-size: cover;
         <% } %><%- theme.dark.footer_css %>
         }
@@ -22,7 +24,7 @@
     <% } %>
     <%# Libraries %>
     <%- js(url_for(theme.library.fontawesome)) %>
-    <% if (is_post() && theme.library.fancybox.enabled && has_image(page.content)) { %>
+    <% if (is_post() && theme.library.fancybox.enabled && (has_image(page.content) || page.photos)) { %>
         <%- css(url_for(theme.library.fancybox.css)) %>
         <%- js([
             {src: url_for(theme.library.jquery)},
