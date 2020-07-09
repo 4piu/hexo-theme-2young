@@ -230,7 +230,6 @@ footer#footer #footer-signature a {
 }
 .sidebar {
   max-width: 15rem;
-  min-width: 15rem;
   flex-grow: 1;
   flex-shrink: 0;
 }
@@ -453,6 +452,7 @@ footer#footer #footer-signature a {
 }
 .sidebar-widget {
   margin: 1rem 1.5rem 4rem 1.5rem;
+  min-width: 13rem;
 }
 .sidebar-widget .widget-title {
   font-size: large;
@@ -464,7 +464,6 @@ footer#footer #footer-signature a {
   display: block;
   margin: 1rem;
   padding-inline-start: 0;
-  position: relative;
 }
 .sidebar-widget .archive-list .archive-list-item,
 .sidebar-widget .category-list .archive-list-item,
@@ -475,10 +474,11 @@ footer#footer #footer-signature a {
 .sidebar-widget .archive-list .tag-list-item,
 .sidebar-widget .category-list .tag-list-item,
 .sidebar-widget .tag-list .tag-list-item {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   list-style-type: none;
-  position: relative;
   margin: 1rem 0;
+  word-break: break-word;
 }
 .sidebar-widget .archive-list .archive-list-item .archive-list-count,
 .sidebar-widget .category-list .archive-list-item .archive-list-count,
@@ -507,8 +507,6 @@ footer#footer #footer-signature a {
 .sidebar-widget .archive-list .tag-list-item .tag-list-count,
 .sidebar-widget .category-list .tag-list-item .tag-list-count,
 .sidebar-widget .tag-list .tag-list-item .tag-list-count {
-  position: absolute;
-  right: 0;
   font-size: small;
   padding: 0.1rem;
   border-radius: 0.2rem;
