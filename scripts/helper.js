@@ -7,3 +7,7 @@ var util=require("hexo-util"),stripHTML=util.stripHTML,counter=function(u){retur
 hexo.extend.helper.register("has_image", content => {
     return !!content.match(/<img.*?>/);
 });
+
+hexo.extend.helper.register("has_highlight", content => {
+    return !!content.match(/class="hljs.*?"/);
+})
