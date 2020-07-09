@@ -439,7 +439,7 @@ footer#footer #footer-signature a {
 #widget-profile {
   display: flex;
   flex-direction: column;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
 }
 #widget-profile > * {
   align-self: center;
@@ -461,8 +461,12 @@ footer#footer #footer-signature a {
 #widget-profile #profile-bio p {
   margin: 0;
 }
-#widget-profile .social-list {
+#widget-profile hr {
+  width: 100%;
   margin: 1rem 0;
+  opacity: 0.3;
+}
+#widget-profile .social-list {
   font-size: x-large;
   line-height: 1.5;
 }

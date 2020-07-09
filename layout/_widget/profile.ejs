@@ -13,6 +13,7 @@ if (theme.author.avatar) {
     <div id="profile-name"><%- theme.author.name || config.author %></div>
     <div id="profile-bio"><%- markdown(theme.author.bio) %></div>
     <% if (theme.social.show_in_author_widget) { %>
+        <hr>
         <%- partial("_widget/social") %>
     <% } %>
 </div>
