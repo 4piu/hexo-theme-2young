@@ -8,12 +8,6 @@ manifest: #"assets/site.webmanifest"
 direction: "ltr"
 rss: "//blog.skk.moe/atom.xml"
 
-author:
-  enabled: true
-  name: # default to config.author
-  bio: "*A newbie learns to code.* __Lorem ipsum__ dolor sit amet, [consectetur adipiscing](//hexo.io) elit. Sed elit felis, placerat sit amet nisl eu, viverra posuere nisl. " # default to config.description
-  avatar: "assets/avatar.jpg" # default to gravatar > assets/avatar.jpg
-
 social:
   show_in_footer: true
   show_in_author_widget: true
@@ -77,6 +71,33 @@ back_to_top:
 style_toggle:
   enabled: true
 
+sidebar:
+  author:
+    enabled: true
+    name: # default to config.author
+    bio: "*A newbie learns to code.* __Lorem ipsum__ dolor sit amet, [consectetur adipiscing](//hexo.io) elit. Sed elit felis, placerat sit amet nisl eu, viverra posuere nisl. " # default to config.description
+    avatar: "assets/avatar.jpg" # default to gravatar > assets/avatar.jpg
+
+  tagcloud:
+    enabled: true
+    amount: # amount of tag to show, default is unlimited
+
+  category:
+    enabled: true
+    order_by:
+    order: # 'asc' or 'desc'
+    show_count: true
+    depth:
+
+  archive:
+    enabled: true
+    type: "yearly"
+    order: # 'asc' or 'desc'
+    show_count: true
+
+  toc:
+    enabled: true
+
 nav:
   archives:
     enabled: true
@@ -101,13 +122,6 @@ library:
     enabled: true
     css: "//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"
     js: "//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js"
-
-tagcloud:
-  enabled: true
-  amount: # amount of tag to show, default is unlimited
-
-toc:
-  enabled: true
 
 copyright: # display copyright info after post
   enabled: true
