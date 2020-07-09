@@ -9,7 +9,7 @@
     </aside>
 <% } else if (position === "right") { %>
     <aside id="right-sidebar" class="sidebar">
-        <% if (is_home() && theme.sidebar.tagcloud.enabled) { %>
+        <% if (is_home() && theme.sidebar.tag.enabled) { %>
             <%- partial("_widget/tag") %>
         <% } %>
         <% if (is_home() && theme.sidebar.archive.enabled) { %>

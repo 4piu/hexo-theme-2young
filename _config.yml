@@ -78,8 +78,11 @@ sidebar:
     bio: "*A newbie learns to code.* __Lorem ipsum__ dolor sit amet, [consectetur adipiscing](//hexo.io) elit. Sed elit felis, placerat sit amet nisl eu, viverra posuere nisl. " # default to config.description
     avatar: "assets/avatar.jpg" # default to gravatar > assets/avatar.jpg
 
-  tagcloud:
+  tag:
     enabled: true
+    orderby:
+    order:
+    show_count: true
     amount: # amount of tag to show, default is unlimited
 
   category:
