@@ -216,7 +216,6 @@ footer#footer #footer-signature a {
 .sidebar {
   max-width: 15rem;
   min-width: 15rem;
-  padding: 1rem;
   flex-grow: 1;
   flex-shrink: 0;
 }
@@ -440,14 +439,14 @@ footer#footer #footer-signature a {
 #widget-profile {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+  padding: 1rem 2rem;
 }
 #widget-profile > * {
   align-self: center;
 }
 #widget-profile img#profile-avatar {
-  width: 10rem;
-  height: 10rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   vertical-align: middle;
 }
@@ -457,12 +456,13 @@ footer#footer #footer-signature a {
   font-weight: bold;
 }
 #widget-profile #profile-bio {
-  margin: 1rem 0.5rem;
-  font-size: large;
   line-height: 1.5;
 }
+#widget-profile #profile-bio p {
+  margin: 0;
+}
 #widget-profile .social-list {
-  margin: 1rem 0.5rem;
+  margin: 1rem 0;
   font-size: x-large;
   line-height: 1.5;
 }
