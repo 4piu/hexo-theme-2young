@@ -242,4 +242,8 @@
   padding: 0.5rem;
   margin-top: 4rem;
 }
+#post-gallery img {
+  width: 100%;
+  padding: 1rem;
+}
 /*# sourceMappingURL=post.css.map */
