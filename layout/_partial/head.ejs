@@ -14,31 +14,32 @@
     <% if (is_post()) { %>
         <%- css("css/post.css") %>
         <% if (has_highlight(page.content)) { %>
-        <link id="css-highlight-light" rel="preload" href="<%- url_for(theme.light.code_highlight_css) %>"
-              as="style" onload="this.rel='stylesheet'">
-        <link id="css-highlight-dark" rel="preload" href="<%- url_for(theme.dark.code_highlight_css) %>" as="style"
-              onload="this.rel='stylesheet'">
+            <link id="css-highlight-light" rel="preload" href="<%- url_for(theme.light.code_highlight_css) %>"
+                  as="style" onload="this.rel='stylesheet'">
+            <link id="css-highlight-dark" rel="preload" href="<%- url_for(theme.dark.code_highlight_css) %>" as="style"
+                  onload="this.rel='stylesheet'">
         <% } %>
     <% } %>
     <%- js("js/main.js") %>
     <%
     var title = page.title;
     if (is_archive()) {
-        title = titlecase(__('archive'));
+        title = __('archive');
         if (is_month()) {
             title += ': ' + page.year + '/' + page.month;
         } else if (is_year()) {
             title += ': ' + page.year;
         }
     } else if (is_category()) {
-        title = titlecase(__('category')) + ': ' + page.category;
+        title = __('category') + ': ' + page.category;
     } else if (is_tag()) {
-        title = titlecase(__('tag')) + ': ' + page.tag;
+        title = __('tag') + ': ' + page.tag;
     }
     %>
     <title>
-        <% if (title){ %><%= title %> |
+        <% if (title){ %>
+            <%- titlecase(title) %> |
         <% } %>
-        <%= config.title %>
+        <%- titlecase(theme.title || config.title) %>
     </title>
 </head>
