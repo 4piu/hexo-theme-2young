@@ -24,7 +24,7 @@
     <% } %>
     <%# Libraries %>
     <%- js(url_for(theme.library.fontawesome)) %>
-    <% if (is_post() && theme.library.fancybox.enabled && (has_image(page.content) || page.photos)) { %>
+    <% if (is_post() && theme.library.fancybox.enabled && (has_image(page.content) || page.photos.length > 0)) { %>
         <%- css(url_for(theme.library.fancybox.css)) %>
         <%- js([
             {src: url_for(theme.library.jquery)},
