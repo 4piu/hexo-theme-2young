@@ -5,14 +5,14 @@
       style="
               --theme-light-main: <%- theme.light.theme_color %>;
               --theme-light-main-dim: <%- pSBC(.2, theme.light.theme_color, theme.light.background_color) %>;
-              --theme-light-text: <%- theme.light.text_color %>;
-              --theme-light-text-dim: <%- pSBC(.3, theme.light.text_color, theme.light.background_color) %>;
+              --theme-light-foreground: <%- theme.light.foreground_color %>;
+              --theme-light-foreground-dim: <%- pSBC(.3, theme.light.foreground_color, theme.light.background_color) %>;
               --theme-light-background: <%- theme.light.background_color %>;
 
               --theme-dark-main: <%- theme.dark.theme_color %>;
               --theme-dark-main-dim: <%- pSBC(.3, theme.dark.theme_color, theme.dark.background_color) %>;
-              --theme-dark-text: <%- theme.dark.text_color %>;
-              --theme-dark-text-dim: <%- pSBC(.3, theme.dark.text_color, theme.dark.background_color) %>;
+              --theme-dark-foreground: <%- theme.dark.foreground_color %>;
+              --theme-dark-foreground-dim: <%- pSBC(.3, theme.dark.foreground_color, theme.dark.background_color) %>;
               --theme-dark-background: <%- theme.dark.background_color %>;
               ">
 <%- partial('_partial/head') %>

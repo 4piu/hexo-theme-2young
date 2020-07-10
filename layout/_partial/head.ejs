@@ -10,7 +10,6 @@
         <link rel="manifest" href="<%- url_for(theme.manifest) %>">
     <% } %>
     <%- partial("_widget/analytics") %>
-    <%- css("css/style.css") %>
     <% if (is_post()) { %>
         <%- css("css/post.css") %>
         <% if (has_highlight(page.content)) { %>
@@ -19,6 +18,8 @@
             <link id="css-highlight-dark" rel="preload" href="<%- url_for(theme.dark.code_highlight_css) %>" as="style"
                   onload="this.rel='stylesheet'">
         <% } %>
+    <% } else { %>
+        <%- css("css/style.css") %>
     <% } %>
     <%- js("js/main.js") %>
     <%

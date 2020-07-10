@@ -7,6 +7,56 @@
 @light: ~":root[data-theme='light']";
 @rtl: ~":root[dir='rtl']";
 
+.color-main {
+  @{light} & {
+    color: var(--theme-light-main);
+  }
+
+  @{dark} & {
+    color: var(--theme-dark-main);
+  }
+}
+
+.color-main-dimmed {
+  @{light} & {
+    color: var(--theme-light-main-dim);
+  }
+
+  @{dark} & {
+    color: var(--theme-dark-main-dim);
+  }
+}
+
+.color-foreground {
+  @{light} & {
+    color: var(--theme-light-foreground);
+  }
+
+  @{dark} & {
+    color: var(--theme-dark-foreground);
+  }
+}
+
+.color-foreground-dimmed {
+  @{light} & {
+    color: var(--theme-light-foreground-dim);
+  }
+
+  @{dark} & {
+    color: var(--theme-dark-foreground-dim);
+  }
+}
+
+.color-background {
+  @{light} & {
+    background: var(--theme-light-background);
+  }
+
+  @{dark} & {
+    background: var(--theme-dark-background);
+  }
+}
+
 .flex-pull-left {
   margin-right: auto;
 
@@ -83,20 +133,10 @@ a {
   text-decoration: none;
   transition: color .3s;
 
-  @{dark} & {
-    color: var(--theme-dark-main-dim);
+  .color-main-dimmed;
 
-    &:hover {
-      color: var(--theme-dark-main);
-    }
-  }
-
-  @{light} & {
-    color: var(--theme-light-main-dim);
-
-    &:hover {
-      color: var(--theme-light-main);
-    }
+  &:hover {
+    .color-main;
   }
 }
 
@@ -107,15 +147,8 @@ body {
   min-width: 320px;
   transition: background .5s, color .5s;
 
-  @{dark} & {
-    background: var(--theme-dark-background);
-    color: var(--theme-dark-text);
-  }
-
-  @{light} & {
-    background: var(--theme-light-background);
-    color: var(--theme-light-text);
-  }
+  .color-background;
+  .color-foreground;
 }
 
 :root, body {
@@ -208,6 +241,13 @@ body {
 
   #header-nav {
     flex-wrap: wrap;
+    .flex-pull-left;
+    .flex-margin-r-sm;
+  }
+
+  #header-button-group {
+    .flex-pull-right;
+    .flex-margin-l-xs;
   }
 
   .header-info {
@@ -387,13 +427,7 @@ footer#footer {
         margin-right: unset;
       }
 
-      @{light} & {
-        color: var(--theme-light-text-dim);
-      }
-
-      @{dark} & {
-        color: var(--theme-dark-text-dim);
-      }
+      .color-foreground-dimmed;
     }
 
     .tag {
@@ -418,37 +452,12 @@ footer#footer {
 
   .excerpt {
     a {
-      // clickable
       z-index: 1;
       position: relative;
       transition: color .3s;
-
-      &:hover {
-        @{light} & {
-          color: var(--theme-light-main);
-        }
-
-        @{dark} & {
-          color: var(--theme-dark-main);
-        }
-      }
-
-      @{light} & {
-        color: var(--theme-light-main-dim);
-      }
-
-      @{dark} & {
-        color: var(--theme-dark-main-dim);
-      }
     }
 
-    @{light} & {
-      color: var(--theme-light-text-dim);
-    }
-
-    @{dark} & {
-      color: var(--theme-dark-text-dim);
-    }
+    .color-foreground-dimmed;
   }
 }
 
@@ -457,13 +466,7 @@ footer#footer {
   font-weight: bold;
   margin: 2rem 0;
 
-  @{light} & {
-    color: var(--theme-light-main);
-  }
-
-  @{dark} & {
-    color: var(--theme-dark-main);
-  }
+  .color-main;
 }
 
 #paginator {
@@ -482,20 +485,10 @@ footer#footer {
   .extend, .page-number:not(.current) {
     transition: color .3s;
 
-    @{light} & {
-      color: var(--theme-light-main-dim);
+    .color-main-dimmed;
 
-      &:hover {
-        color: var(--theme-light-main);
-      }
-    }
-
-    @{dark} & {
-      color: var(--theme-dark-main-dim);
-
-      &:hover {
-        color: var(--theme-dark-main);
-      }
+    &:hover {
+      .color-main;
     }
   }
 
@@ -602,13 +595,7 @@ footer#footer {
           right: unset;
         }
 
-        @{light} & {
-          color: var(--theme-light-text-dim);
-        }
-
-        @{dark} & {
-          color: var(--theme-dark-text-dim);
-        }
+        .color-foreground-dimmed;
       }
 
       .category-list-child {
@@ -663,16 +650,6 @@ footer#footer {
 
     a {
       color: inherit;
-
-      &:hover {
-        @{light} & {
-          color: var(--theme-light-main);
-        }
-
-        @{dark} & {
-          color: var(--theme-dark-main);
-        }
-      }
     }
   }
 }

@@ -31,7 +31,7 @@ style: "auto" # 'auto', 'light', 'dark'. 'auto' will use media query to decide w
 
 light:
   theme_color: "#005ca0"
-  text_color: "#333"
+  foreground_color: "#333"
   background_color: "#fff"
   header_image: "assets/header.jpg" # leave empty if use pure background
   header_css: "color:white!important;text-shadow:0 0 4px rgba(0,0,0,0.5);"  # applied to div#header
@@ -41,7 +41,7 @@ light:
 
 dark:
   theme_color: "#0ecfc5"
-  text_color: "#ccc"
+  foreground_color: "#ccc"
   background_color: "#222"
   header_image: "assets/header.jpg"
   header_css: "color:white!important;text-shadow:0 0 4px rgba(0,0,0,0.5);"

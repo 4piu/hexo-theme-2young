@@ -1,3 +1,33 @@
+:root[data-theme='light'] .color-main {
+  color: var(--theme-light-main);
+}
+:root[data-theme='dark'] .color-main {
+  color: var(--theme-dark-main);
+}
+:root[data-theme='light'] .color-main-dimmed {
+  color: var(--theme-light-main-dim);
+}
+:root[data-theme='dark'] .color-main-dimmed {
+  color: var(--theme-dark-main-dim);
+}
+:root[data-theme='light'] .color-foreground {
+  color: var(--theme-light-foreground);
+}
+:root[data-theme='dark'] .color-foreground {
+  color: var(--theme-dark-foreground);
+}
+:root[data-theme='light'] .color-foreground-dimmed {
+  color: var(--theme-light-foreground-dim);
+}
+:root[data-theme='dark'] .color-foreground-dimmed {
+  color: var(--theme-dark-foreground-dim);
+}
+:root[data-theme='light'] .color-background {
+  background: var(--theme-light-background);
+}
+:root[data-theme='dark'] .color-background {
+  background: var(--theme-dark-background);
+}
 .flex-pull-left {
   margin-right: auto;
 }
@@ -52,17 +82,17 @@ a {
   text-decoration: none;
   transition: color 0.3s;
 }
-:root[data-theme='dark'] a {
-  color: var(--theme-dark-main-dim);
-}
-:root[data-theme='dark'] a:hover {
-  color: var(--theme-dark-main);
-}
 :root[data-theme='light'] a {
   color: var(--theme-light-main-dim);
 }
+:root[data-theme='dark'] a {
+  color: var(--theme-dark-main-dim);
+}
 :root[data-theme='light'] a:hover {
   color: var(--theme-light-main);
+}
+:root[data-theme='dark'] a:hover {
+  color: var(--theme-dark-main);
 }
 body {
   font-family: sans-serif;
@@ -71,13 +101,17 @@ body {
   min-width: 320px;
   transition: background 0.5s, color 0.5s;
 }
-:root[data-theme='dark'] body {
-  background: var(--theme-dark-background);
-  color: var(--theme-dark-text);
-}
 :root[data-theme='light'] body {
   background: var(--theme-light-background);
-  color: var(--theme-light-text);
+}
+:root[data-theme='dark'] body {
+  background: var(--theme-dark-background);
+}
+:root[data-theme='light'] body {
+  color: var(--theme-light-foreground);
+}
+:root[data-theme='dark'] body {
+  color: var(--theme-dark-foreground);
 }
 :root,
 body {
@@ -149,6 +183,32 @@ body {
 }
 #header #header-nav {
   flex-wrap: wrap;
+  margin-right: auto;
+}
+:root[dir='rtl'] #header #header-nav {
+  margin-left: auto;
+  margin-right: unset;
+}
+#header #header-nav > * {
+  margin-right: 1rem;
+}
+:root[dir='rtl'] #header #header-nav > * {
+  margin-left: 1rem;
+  margin-right: unset;
+}
+#header #header-button-group {
+  margin-left: auto;
+}
+:root[dir='rtl'] #header #header-button-group {
+  margin-left: unset;
+  margin-right: auto;
+}
+#header #header-button-group > * {
+  margin-left: 0.5rem;
+}
+:root[dir='rtl'] #header #header-button-group > * {
+  margin-left: unset;
+  margin-right: 0.5rem;
 }
 #header .header-info {
   padding: 0 2rem 2rem 2rem;
@@ -311,10 +371,10 @@ footer#footer #footer-signature a {
   margin-right: unset;
 }
 :root[data-theme='light'] .archive-item .meta .date {
-  color: var(--theme-light-text-dim);
+  color: var(--theme-light-foreground-dim);
 }
 :root[data-theme='dark'] .archive-item .meta .date {
-  color: var(--theme-dark-text-dim);
+  color: var(--theme-dark-foreground-dim);
 }
 .archive-item .meta .tag {
   direction: ltr;
@@ -336,23 +396,11 @@ footer#footer #footer-signature a {
   position: relative;
   transition: color 0.3s;
 }
-:root[data-theme='light'] .archive-item .excerpt a:hover {
-  color: var(--theme-light-main);
-}
-:root[data-theme='dark'] .archive-item .excerpt a:hover {
-  color: var(--theme-dark-main);
-}
-:root[data-theme='light'] .archive-item .excerpt a {
-  color: var(--theme-light-main-dim);
-}
-:root[data-theme='dark'] .archive-item .excerpt a {
-  color: var(--theme-dark-main-dim);
-}
 :root[data-theme='light'] .archive-item .excerpt {
-  color: var(--theme-light-text-dim);
+  color: var(--theme-light-foreground-dim);
 }
 :root[data-theme='dark'] .archive-item .excerpt {
-  color: var(--theme-dark-text-dim);
+  color: var(--theme-dark-foreground-dim);
 }
 .archive-label {
   font-size: large;
@@ -385,13 +433,13 @@ footer#footer #footer-signature a {
 :root[data-theme='light'] #paginator .page-number:not(.current) {
   color: var(--theme-light-main-dim);
 }
-:root[data-theme='light'] #paginator .extend:hover,
-:root[data-theme='light'] #paginator .page-number:not(.current):hover {
-  color: var(--theme-light-main);
-}
 :root[data-theme='dark'] #paginator .extend,
 :root[data-theme='dark'] #paginator .page-number:not(.current) {
   color: var(--theme-dark-main-dim);
+}
+:root[data-theme='light'] #paginator .extend:hover,
+:root[data-theme='light'] #paginator .page-number:not(.current):hover {
+  color: var(--theme-light-main);
 }
 :root[data-theme='dark'] #paginator .extend:hover,
 :root[data-theme='dark'] #paginator .page-number:not(.current):hover {
@@ -570,7 +618,7 @@ footer#footer #footer-signature a {
 :root[data-theme='light'] .sidebar-widget .archive-list .tag-list-item .tag-list-count,
 :root[data-theme='light'] .sidebar-widget .category-list .tag-list-item .tag-list-count,
 :root[data-theme='light'] .sidebar-widget .tag-list .tag-list-item .tag-list-count {
-  color: var(--theme-light-text-dim);
+  color: var(--theme-light-foreground-dim);
 }
 :root[data-theme='dark'] .sidebar-widget .archive-list .archive-list-item .archive-list-count,
 :root[data-theme='dark'] .sidebar-widget .category-list .archive-list-item .archive-list-count,
@@ -599,7 +647,7 @@ footer#footer #footer-signature a {
 :root[data-theme='dark'] .sidebar-widget .archive-list .tag-list-item .tag-list-count,
 :root[data-theme='dark'] .sidebar-widget .category-list .tag-list-item .tag-list-count,
 :root[data-theme='dark'] .sidebar-widget .tag-list .tag-list-item .tag-list-count {
-  color: var(--theme-dark-text-dim);
+  color: var(--theme-dark-foreground-dim);
 }
 .sidebar-widget .archive-list .archive-list-item .category-list-child,
 .sidebar-widget .category-list .archive-list-item .category-list-child,
@@ -650,12 +698,6 @@ footer#footer #footer-signature a {
 }
 #widget-profile .social-list a {
   color: inherit;
-}
-:root[data-theme='light'] #widget-profile .social-list a:hover {
-  color: var(--theme-light-main);
-}
-:root[data-theme='dark'] #widget-profile .social-list a:hover {
-  color: var(--theme-dark-main);
 }
 .social-list {
   user-select: none;

@@ -13,7 +13,7 @@
         }
     </style>
     <div id="header-toolbar">
-        <div id="header-nav" class="flex-pull-left flex-margin-r-sm">
+        <div id="header-nav">
             <a class="header-nav-tab  <%- is_home() ? "active-tab" : "" %>"
                href="<%- config.root %>"
             >
@@ -55,7 +55,7 @@
                 </a>
             <% } %>
         </div>
-        <div class="flex-pull-right flex-margin-l-xs">
+        <div id="header-button-group">
             <% if (theme.rss) { %>
                 <a id="rss-button" href="<%- theme.rss %>"><i class="fa-fw fas fa-rss"></i></a>
             <% } %>

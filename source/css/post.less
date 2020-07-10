@@ -1,10 +1,6 @@
 // post/page content style sheet
 
-@mobile: ~"(max-width: 425px)";
-@tablet: ~"(max-width: 728px)";
-@dark: ~":root[data-theme='dark']";
-@light: ~":root[data-theme='light']";
-@rtl: ~":root[dir='rtl']";
+@import "./style.less";
 
 #header {
   .header-info {
@@ -168,13 +164,7 @@
 
   .highlight {
     .gutter {
-      @{light} & {
-        color: var(--theme-light-text-dim);
-      }
-
-      @{dark} & {
-        color: var(--theme-dark-text-dim);
-      }
+      .color-foreground-dimmed;
     }
 
     code {
@@ -199,22 +189,10 @@
   margin: 2rem 1rem;
   font-size: large;
 
-  @{light} & {
-    color: var(--theme-light-main-dim);
-  }
-
-  @{dark} & {
-    color: var(--theme-dark-main-dim);
-  }
+  .color-main-dimmed;
 
   & > *:hover {
-    @{light} & {
-      color: var(--theme-light-main);
-    }
-
-    @{dark} & {
-      color: var(--theme-dark-main);
-    }
+    .color-main;
   }
 
   & > * {
