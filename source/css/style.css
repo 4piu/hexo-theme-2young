@@ -708,6 +708,7 @@ footer#footer #footer-signature a {
 #category-labels .category-list {
   display: flex;
   list-style-type: none;
+  flex-wrap: wrap;
 }
 #category-labels .category-list > * {
   margin-right: 1rem;
@@ -720,6 +721,7 @@ footer#footer #footer-signature a {
   padding: 0.5rem;
   border-radius: 0.2rem;
   background: rgba(180, 180, 180, 0.2);
+  margin: 0.5rem;
 }
 #category-labels .category-list .category-list-count {
   padding: 0 0.2rem;
@@ -730,5 +732,9 @@ footer#footer #footer-signature a {
   display: flex;
   align-items: baseline;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#tagcloud a {
+  margin: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */
