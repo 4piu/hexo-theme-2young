@@ -63,7 +63,7 @@ light:
   background_color: "#fff"
   header_image: "assets/header.jpg" # leave empty if use pure background
   header_css: "color:white!important;text-shadow:0 0 4px rgba(0,0,0,0.5);"  # applied to div#header
-  footer_image: "assets/footer.jpg"# leave empty if use pure background
+  footer_image: "assets/footer.jpg" # leave empty if use pure background
   footer_css: "color:white!important;"  # applied to footer#footer
   code_highlight_css: "//cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/default.min.css" # highlightjs css file. Must set config.highlight.hljs to true
 

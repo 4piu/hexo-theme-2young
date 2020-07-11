@@ -335,6 +335,11 @@ footer#footer {
   order: 2;
   flex-grow: 1;
   max-width: 768px;
+  padding: 0 2rem;
+
+  @media @mobile {
+    padding: 0 1rem;
+  }
 }
 
 .sidebar {
@@ -359,10 +364,6 @@ footer#footer {
   @media @laptop {
     display: none;
   }
-}
-
-#archive-list {
-  padding: 0 1rem;
 }
 
 .archive-item {
