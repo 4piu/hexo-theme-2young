@@ -16,7 +16,7 @@
  
  In hexo blog directory:
  ```shell script
- git clone --depth 1 https://github.com/nobody-65534/hexo-theme-2young.git theme/2young
+ git clone --depth 1 https://github.com/nobody-65534/hexo-theme-2young.git themes/2young
  ```
  
  In `_config.yml`:
