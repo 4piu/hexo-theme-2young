@@ -12,7 +12,7 @@ if (theme.sidebar.author.avatar) {
     <img id="profile-avatar" src="<%- avatarUrl %>" alt="Author avatar"/>
     <div id="profile-name"><%- theme.sidebar.author.name || config.author %></div>
     <div id="profile-bio"><%- markdown(theme.sidebar.author.bio) %></div>
-    <% if (theme.social.show_in_author_widget) { %>
+    <% if (theme.social.show_in_profile) { %>
         <hr>
         <%- partial("_widget/social") %>
     <% } %>
