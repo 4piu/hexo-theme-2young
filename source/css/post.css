@@ -712,6 +712,11 @@ footer#footer #footer-signature a {
   display: flex;
   list-style-type: none;
   flex-wrap: wrap;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
 }
 #category-labels .category-list > * {
   margin-right: 1rem;
