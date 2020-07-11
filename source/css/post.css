@@ -287,6 +287,12 @@ footer#footer #footer-signature a {
   order: 2;
   flex-grow: 1;
   max-width: 768px;
+  padding: 0 2rem;
+}
+@media (max-width: 425px) {
+  #content-wrap {
+    padding: 0 1rem;
+  }
 }
 .sidebar {
   max-width: 15rem;
@@ -313,9 +319,6 @@ footer#footer #footer-signature a {
   #right-sidebar {
     display: none;
   }
-}
-#archive-list {
-  padding: 0 1rem;
 }
 .archive-item {
   position: relative;
@@ -759,7 +762,6 @@ footer#footer #footer-signature a {
 }
 #post-content {
   margin-bottom: 4rem;
-  padding: 0 2rem;
   line-height: 2;
   overflow-wrap: break-word;
 }
