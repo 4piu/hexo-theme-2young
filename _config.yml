@@ -82,7 +82,7 @@ date_format:
   post: "MMM Do YYYY" # date format used in header of the post page
 
 footer:
-  md: "© 2016-2020 AuthorName Powered by [Hexo](//hexo.io)" # text to show in the footer, markdown supported
+  md: "© 2016-2020 AuthorName Powered by [Hexo](//hexo.io) | Theme [2 Young](//github.com/nobody-65534/hexo-theme-2young)" # text to show in the footer, markdown supported
   text_align: "right" # 'center', 'left', 'right'
 
 paginator:
@@ -114,13 +114,13 @@ sidebar:
     amount: # amount of tag to show, default is unlimited
 
   category:
-    enabled: true
+    enabled: true # show category list
     orderby: # order of categories, default is name
     order:  # sort of order. 1, asc for ascending; -1, desc for descending
     show_count: true  # show post count
 
   archive:
-    enabled: true
+    enabled: true # show archive list
     type: "yearly"  #'yearly', 'monthly'
     order:  # sort of order. 1, asc for ascending; -1, desc for descending
     show_count: true  # show post count

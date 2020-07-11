@@ -4,10 +4,12 @@ hexo.extend.helper.register("pSBC",(r,e,t,l)=>{let n,g,i,s,a,p,b,h=parseInt,u=Ma
 // https://raw.githubusercontent.com/willin/hexo-wordcount/master/index.js
 var util=require("hexo-util"),stripHTML=util.stripHTML,counter=function(u){return[((u=stripHTML(u)).match(/[\u4E00-\u9FA5]/g)||[]).length,(u.replace(/[\u4E00-\u9FA5]/g,"").match(/[a-zA-Z0-9_\u0392-\u03c9\u0400-\u04FF]+|[\u4E00-\u9FFF\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\uac00-\ud7af\u0400-\u04FF]+|[\u00E4\u00C4\u00E5\u00C5\u00F6\u00D6]+|\w+/g)||[]).length]};hexo.extend.helper.register("min2read",function(u,{cn:e=300,en:t=160}={}){var r=counter(u),n=r[0]/e+r[1]/t;return n<1?"1":parseInt(n,10)}),hexo.extend.helper.register("wordcount",function(u){var e=counter(u),t=e[0]+e[1];return t<1e3?t:Math.round(t/100)/10+"k"}),hexo.extend.helper.register("totalcount",function(u){var e=0;return u.posts.forEach(function(u){var t=counter(u.content);e+=t[0]+t[1]}),e<1e3?e:Math.round(e/100)/10+"k"});
 
+// check if the post includes image
 hexo.extend.helper.register("has_image", content => {
     return !!content.match(/<img.*?>/);
 });
 
+// check if the post includes code highlight
 hexo.extend.helper.register("has_highlight", content => {
     return !!content.match(/class="hljs.*?"/);
 })
