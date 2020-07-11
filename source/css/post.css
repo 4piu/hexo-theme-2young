@@ -695,6 +695,9 @@ footer#footer #footer-signature a {
 #widget-profile .social-list {
   font-size: x-large;
   line-height: 1.5;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
 }
 #widget-profile .social-list a {
   color: inherit;
