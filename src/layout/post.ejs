@@ -1,0 +1,18 @@
+<div id="post-content">
+    <% if (theme.outdated_warning.enabled) { %>
+        <%- partial("_widget/outdated_warning") %>
+    <% } %>
+    <%- page.content %>
+    <% if (page.photos) { %>
+        <%- partial("_partial/gallery") %>
+    <% } %>
+    <% if (theme.copyright.enabled) { %>
+        <%- partial("_widget/copyright") %>
+    <% } %>
+</div>
+<% if (theme.paginator.show_in_post) { %>
+    <%- partial("_widget/post_paginator") %>
+<% } %>
+<% if (page.comments) { %>
+    <%- partial("_widget/comment") %>
+<% } %>

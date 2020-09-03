@@ -1,0 +1,5 @@
+<div id="post-gallery">
+    <% page.photos.forEach(photo => { %>
+        <%- image_tag(url_for(photo), {class: "gallery-photo"}) %>
+    <% }); %>
+</div>

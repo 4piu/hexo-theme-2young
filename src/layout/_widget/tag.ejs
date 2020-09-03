@@ -1,0 +1,10 @@
+<% const option = {
+    amount: theme.sidebar.tag.amount,
+    orderby: theme.sidebar.tag.orderby,
+    order: theme.sidebar.tag.order,
+    show_count: true
+} %>
+<div id="widget-tag" class="sidebar-widget">
+    <div class="widget-title"><%- titlecase(__("tag")) %></div>
+    <%- list_tags(option) %>
+</div>

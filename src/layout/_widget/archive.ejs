@@ -1,0 +1,9 @@
+<% const option = {
+    type: theme.sidebar.archive.type,
+    order: theme.sidebar.archive.order,
+    show_count: theme.sidebar.archive.show_count
+} %>
+<div id="widget-archive" class="sidebar-widget">
+    <div class="widget-title"><%- titlecase(__("archive")) %></div>
+    <%- list_archives(option) %>
+</div>

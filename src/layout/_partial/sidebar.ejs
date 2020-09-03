@@ -1,0 +1,22 @@
+<% if (position === "left") { %>
+    <aside id="left-sidebar" class="sidebar">
+        <% if (theme.sidebar.author.enabled && is_home()) { %>
+            <%- partial('_widget/profile') %>
+        <% } %>
+        <% if (theme.sidebar.toc.enabled && is_post()) { %>
+            <%- partial("_widget/toc") %>
+        <% } %>
+    </aside>
+<% } else if (position === "right") { %>
+    <aside id="right-sidebar" class="sidebar">
+        <% if (is_home() && theme.sidebar.tag.enabled) { %>
+            <%- partial("_widget/tag") %>
+        <% } %>
+        <% if (is_home() && theme.sidebar.archive.enabled) { %>
+            <%- partial("_widget/archive") %>
+        <% } %>
+        <% if (is_home() && theme.sidebar.category.enabled) { %>
+            <%- partial("_widget/category") %>
+        <% } %>
+    </aside>
+<% } %>

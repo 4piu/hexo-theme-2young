@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="<%- theme.direction || "ltr" %>"
+      data-theme="<%= theme.style %>"
+      style="
+              --theme-light-main: <%- theme.light.theme_color %>;
+              --theme-light-main-dim: <%- pSBC(.2, theme.light.theme_color, theme.light.background_color) %>;
+              --theme-light-foreground: <%- theme.light.foreground_color %>;
+              --theme-light-foreground-dim: <%- pSBC(.3, theme.light.foreground_color, theme.light.background_color) %>;
+              --theme-light-background: <%- theme.light.background_color %>;
+
+              --theme-dark-main: <%- theme.dark.theme_color %>;
+              --theme-dark-main-dim: <%- pSBC(.3, theme.dark.theme_color, theme.dark.background_color) %>;
+              --theme-dark-foreground: <%- theme.dark.foreground_color %>;
+              --theme-dark-foreground-dim: <%- pSBC(.3, theme.dark.foreground_color, theme.dark.background_color) %>;
+              --theme-dark-background: <%- theme.dark.background_color %>;
+              ">
+<%- partial('_partial/head') %>
+<body>
+<div id="body-wrap">
+    <%- partial('_partial/header') %>
+    <div id="body" class="flex-center flex-fill">
+        <div id="content-wrap">
+            <%- body %>
+        </div>
+        <% if (is_home() || is_post()) { %>
+            <%- partial('_partial/sidebar', {position: "left"}) %>
+            <%- partial('_partial/sidebar', {position: "right"}) %>
+        <% } %>
+    </div>
+    <%- partial('_partial/footer') %>
+</div>
+<% if (theme.back_to_top.enabled) { %>
+    <%- partial('_widget/back_to_top') %>
+<% } %>
+</body>
+</html>
