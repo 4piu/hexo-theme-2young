@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "clean": "gulp clean",
-    "build": "gulp build"
+    "build": "gulp build",
+    "dev": "gulp dev"
   },
   "dependencies": {},
   "devDependencies": {

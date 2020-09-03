@@ -8,18 +8,7 @@ const revRewrite = require("gulp-rev-rewrite");
 const revDelete = require("gulp-rev-delete-original");
 const revCss = require("gulp-rev-css-url");
 const cleanCSS = require("gulp-clean-css");
-const webp = require('gulp-webp');
-
-const clean = () => {
-    return del([
-        "source/",
-        "layout/",
-        "scripts/",
-        "languages/",
-        "rev-manifest.json",
-        "_config.example.yml"
-    ]);
-};
+const webp = require("gulp-webp");
 
 const cssCompile = () => {
     return src("src/layout/**/*.less")
@@ -72,11 +61,26 @@ const layout = () => {
         .pipe(dest("layout/"));
 };
 
-exports.clean = clean;
+const clean = () => del([
+    "source/",
+    "layout/",
+    "scripts/",
+    "languages/",
+    "rev-manifest.json",
+    "_config.example.yml"
+]);
 
-exports.build = series(
+const build = series(
     clean,
     parallel(cssCompile, jsCompile, imgCompress, copyFile),
     revision,
     layout
 );
+
+const dev = () => watch("src/", {delay: 1000}, build);
+
+module.exports = {
+    clean: clean,
+    build: build,
+    dev: dev
+};
