@@ -11,7 +11,7 @@
     <% } %>
     <%- partial("_widget/analytics") %>
     <% if (is_post()) { %>
-        <%- css("css/post-9909839aa2.css") %>
+        <%- css("css/post.css") %>
         <% if (has_highlight(page.content)) { %>
             <link id="css-highlight-light" rel="preload" href="<%- url_for(theme.light.code_highlight_css) %>"
                   as="style" onload="this.rel='stylesheet'">
@@ -19,9 +19,9 @@
                   onload="this.rel='stylesheet'">
         <% } %>
     <% } else { %>
-        <%- css("css/layout-9f201d10cc.css") %>
+        <%- css("css/layout.css") %>
     <% } %>
-    <%- js("js/main-b4890f5868.js") %>
+    <%- js("js/main.js") %>
     <%
     var title = page.title;
     if (is_archive()) {

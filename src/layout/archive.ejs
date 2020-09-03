@@ -1,0 +1,12 @@
+<div id="archive-list">
+    <% let yearLast = 0; %>
+    <% page.posts.each(post => { %>
+        <% let postYear = post.date.year(); %>
+        <% if (postYear !== yearLast) { %>
+            <div class="archive-label"><%- postYear %></div>
+        <% } %>
+        <% yearLast = postYear %>
+        <%- partial("_partial/item", {post: post}) %>
+    <% }) %>
+</div>
+<%- partial('_partial/paginator') %>

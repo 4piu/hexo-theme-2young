@@ -1,0 +1,5 @@
+<div class="social-list">
+    <% theme.social.items.forEach(item => { %>
+        <a target="_blank" href="<%= item.url %>" title="<%= item.alt %>"><i class="fa-fw <%- item.fa_icon %>"></i></a>
+    <% }); %>
+</div>

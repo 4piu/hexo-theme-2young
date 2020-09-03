@@ -1,0 +1,168 @@
+title: "2 Young" # title, default to config.title
+subtitle: "Example page to test the theme"  # subtitle, default to use config.subtitle
+title_case: true  # capitalize first character
+excerpt: true # show abstract of the post
+word_count: true  # show word count in the header
+favicon: "assets/favicon.ico" # favicon
+manifest: #"assets/site.webmanifest"
+direction: "ltr"  # 'ltr', 'rtl'
+rss: "//blog.skk.moe/atom.xml"  # path to rss xml
+
+social:
+  show_in_footer: true
+  show_in_profile: true
+  items:
+    - alt: "E-mail"
+      url: "mailto:liame@example.com"
+      fa_icon: "fas fa-envelope"
+    - alt: "GitHub"
+      url: "//github.com/torvalds"
+      fa_icon: "fab fa-github"
+    - alt: "Stack Overflow"
+      url: "//stackoverflow.com/u/22656"
+      fa_icon: "fab fa-stack-overflow"
+    - alt: "Twitter"
+      url: "//twitter.com/Twitter"
+      fa_icon: "fab fa-twitter"
+    - alt: "Facebook"
+      url: "//facebook.com/facebook"
+      fa_icon: "fab fa-facebook"
+    - alt: "Instagram"
+      url: "//instagram.com/natgeo"
+      fa_icon: "fab fa-instagram"
+    - alt: "WhatsApp"
+      url: "//wa.me/3194657728"
+      fa_icon: "fab fa-whatsapp"
+    - alt: "WeChat"
+      url: "//via.placeholder.com/200x200?text=WeChat+QR"
+      fa_icon: "fab fa-weixin"
+    - alt: "QQ"
+      url: "//wpa.qq.com/msgrd?uin=1145141919"
+      fa_icon: "fab fa-qq"
+    - alt: "Steam"
+      url: "//steamcommunity.com/id/zenoxio"
+      fa_icon: "fab fa-steam"
+    - alt: "Playstation"
+      url: "//psnprofiles.com/Hakoom"
+      fa_icon: "fab fa-playstation"
+    - alt: "XBox"
+      url: "//account.xbox.com/profile?gamertag=Xonatron"
+      fa_icon: "fab fa-xbox"
+    - alt: "Twitch"
+      url: "//twitch.tv/20musiclive"
+      fa_icon: "fab fa-twitch"
+    - alt: "Youtube"
+      url: "//www.youtube.com/channel/UCZCFT11CWBi3MHNlGf019nw"
+      fa_icon: "fab fa-youtube"
+
+style: "auto" # 'auto', 'light', 'dark'. 'auto' will use media query to decide which theme to use, though does not work on all client.
+
+light:
+  theme_color: "#005ca0"
+  foreground_color: "#333"
+  background_color: "#fff"
+  header_image: "assets/header.jpg" # leave empty if use pure background
+  header_css: "color:white!important;text-shadow:0 0 4px rgba(0,0,0,0.5);"  # applied to div#header
+  footer_image: "assets/footer.jpg" # leave empty if use pure background
+  footer_css: "color:white!important;"  # applied to footer#footer
+  code_highlight_css: "//cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/default.min.css" # highlightjs css file. Must set config.highlight.hljs to true
+
+dark:
+  theme_color: "#0ecfc5"
+  foreground_color: "#ccc"
+  background_color: "#222"
+  header_image: "assets/header.jpg"
+  header_css: "color:white!important;text-shadow:0 0 4px rgba(0,0,0,0.5);"
+  footer_image: "assets/footer.jpg"
+  footer_css: "color:white!important;"
+  code_highlight_css: "//cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/monokai.min.css"
+
+date_format:
+  index: "YYYY-MM-DD" # date format used in home page
+  post: "MMM Do YYYY" # date format used in header of the post page
+
+footer:
+  md: "© 2016-2020 AuthorName Powered by [Hexo](//hexo.io) | Theme [2 Young](//github.com/nobody-65534/hexo-theme-2young)" # text to show in the footer, markdown supported
+  text_align: "right" # 'center', 'left', 'right'
+
+paginator:
+  hide_on_one_page: false # hide if only one page
+  show_in_post: true  # show next/prev post
+  prev_text: "‹"
+  next_text: "›"
+
+back_to_top:
+  enabled: true # show back to top button
+  hide_timeout: 3000  # auto hide button after specified time (ms)
+  height_threshold: 500 # only show if scrollToTop large than specified height (px)
+
+style_toggle:
+  enabled: true # show style toggle button
+
+sidebar:
+  author:
+    enabled: true # show author profile card
+    name: # default to config.author
+    bio: "*A newbie learns to code.* __Lorem ipsum__ dolor sit amet, [consectetur adipiscing](//hexo.io) elit. Sed elit felis, placerat sit amet nisl eu, viverra posuere nisl. " # default to config.description, markdown supported
+    avatar: "assets/avatar.jpg" # default to gravatar, then assets/avatar.jpg
+
+  tag:
+    enabled: true # show tag list
+    orderby: # order of categories, default is name
+    order:  # sort of order. 1, asc for ascending; -1, desc for descending
+    show_count: true  # show post count
+    amount: # amount of tag to show, default is unlimited
+
+  category:
+    enabled: true # show category list
+    orderby: # order of categories, default is name
+    order:  # sort of order. 1, asc for ascending; -1, desc for descending
+    show_count: true  # show post count
+
+  archive:
+    enabled: true # show archive list
+    type: "yearly"  #'yearly', 'monthly'
+    order:  # sort of order. 1, asc for ascending; -1, desc for descending
+    show_count: true  # show post count
+
+  toc:
+    enabled: true # show table of content in post page
+
+nav:
+  archives:
+    enabled: true
+    url: "archives/"
+  categories: # hexo new page 'categories'
+    enabled: true
+    url: "categories/"
+  tags: # hexo new page 'tags'
+    enabled: true
+    url: "tags/"
+  about:  # hexo new page 'about'
+    enabled: true
+    url: "about/"
+  friends:  # hexo new page 'friends'
+    enabled: true
+    url: "friends/"
+
+library:
+  fontawesome: "//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"
+  jquery: "//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"
+  fancybox:
+    enabled: true # enable fancybox for images in the post
+    css: "//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"
+    js: "//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js"
+
+copyright:
+  enabled: true # display copyright info after post
+  license: '<a href="//creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>' # include "license: [html]" in the post header to overwrite
+
+outdated_warning:
+  enabled: true # show warning if post older than specified days
+  days: "365" # include "expiration: <number>" in the post header to overwrite, -1 will disable expiration for the post
+
+comment:
+  disqus: #"your-id-here"
+
+analytics:
+  google: #"UA-000000-2"

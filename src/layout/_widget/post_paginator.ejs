@@ -1,0 +1,14 @@
+<nav id="post-paginator">
+    <% if (page.prev)  { %>
+        <a id="nav-post-prev" href="<%- url_for(page.prev.link || page.prev.path) %>">
+            <div class="nav-arrow"><i class="fas fa-chevron-left"></i></div>
+            <div><%= page.prev.title %></div>
+        </a>
+    <% } %>
+    <% if (page.next)  { %>
+        <a id="nav-post-next" href="<%- url_for(page.next.link || page.next.path) %>">
+            <div class="nav-arrow"><i class="fas fa-chevron-right"></i></div>
+            <div><%= page.next.title %></div>
+        </a>
+    <% } %>
+</nav>

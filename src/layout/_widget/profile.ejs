@@ -1,0 +1,19 @@
+<%
+let avatarUrl;
+if (theme.sidebar.author.avatar) {
+    avatarUrl = url_for(theme.sidebar.author.avatar);
+} else if (theme.social.email) {
+    avatarUrl = gravatar(theme.social.email, 150);
+} else {
+    avatarUrl = url_for('assets/avatar.jpg');
+}
+%>
+<div id="widget-profile" class="sidebar-widget">
+    <img id="profile-avatar" src="<%- avatarUrl %>" alt="Author avatar"/>
+    <div id="profile-name"><%- theme.sidebar.author.name || config.author %></div>
+    <div id="profile-bio"><%- markdown(theme.sidebar.author.bio) %></div>
+    <% if (theme.social.show_in_profile) { %>
+        <hr>
+        <%- partial("_widget/social") %>
+    <% } %>
+</div>

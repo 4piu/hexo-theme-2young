@@ -1,0 +1,6 @@
+<div id="archive-list">
+    <% page.posts.each(post => { %>
+        <%- partial('_partial/item', {post: post}) %>
+    <% }) %>
+</div>
+<%- partial('_partial/paginator') %>

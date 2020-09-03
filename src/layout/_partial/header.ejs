@@ -1,0 +1,99 @@
+<div id="header">
+    <style type="text/css">
+        :root[data-theme="light"] #header {
+        <% if (theme.light.header_image) { %> background: url(<%- url_for(theme.light.header_image) %>) no-repeat center;
+            background-size: cover;
+        <% } %><%- theme.light.header_css %>
+        }
+
+        :root[data-theme="dark"] #header {
+        <% if (theme.dark.header_image) { %> background: url(<%- url_for(theme.dark.header_image) %>) no-repeat center;
+            background-size: cover;
+        <% } %><%- theme.dark.header_css %>
+        }
+    </style>
+    <div id="header-toolbar">
+        <div id="header-nav">
+            <a class="header-nav-tab  <%- is_home() ? "active-tab" : "" %>"
+               href="<%- config.root %>"
+            >
+                <%- titlecase(__('home')) %>
+            </a>
+            <% if (theme.nav.archives.enabled) { %>
+                <a class="header-nav-tab <%- is_archive() ? "active-tab" : "" %>"
+                   href="<%- url_for(theme.nav.archives.url) %>"
+                >
+                    <%- titlecase(__('archive')) %>
+                </a>
+            <% } %>
+            <% if (theme.nav.categories.enabled) { %>
+                <a class="header-nav-tab <%- is_category() || is_current(url_for(theme.nav.categories.url)) ? "active-tab" : "" %>"
+                   href="<%- url_for(theme.nav.categories.url) %>"
+                >
+                    <%- titlecase(__('category')) %>
+                </a>
+            <% } %>
+            <% if (theme.nav.tags.enabled) { %>
+                <a class="header-nav-tab <%- is_tag() || is_current(url_for(theme.nav.tags.url)) ? "active-tab" : "" %>"
+                   href="<%- url_for(theme.nav.tags.url) %>"
+                >
+                    <%- titlecase(__('tag')) %>
+                </a>
+            <% } %>
+            <% if (theme.nav.friends.enabled) { %>
+                <a class="header-nav-tab <%- is_current(url_for(theme.nav.friends.url)) ? "active-tab" : "" %>"
+                   href="<%- url_for(theme.nav.friends.url) %>"
+                >
+                    <%- titlecase(__('friend')) %>
+                </a>
+            <% } %>
+            <% if (theme.nav.about.enabled) { %>
+                <a class="header-nav-tab <%- is_current(url_for(theme.nav.about.url)) ? "active-tab" : "" %>"
+                   href="<%- url_for(theme.nav.about.url) %>"
+                >
+                    <%- titlecase(__('about')) %>
+                </a>
+            <% } %>
+        </div>
+        <div id="header-button-group">
+            <% if (theme.rss) { %>
+                <a id="rss-button" href="<%- theme.rss %>"><i class="fa-fw fas fa-rss"></i></a>
+            <% } %>
+            <% if (theme.style_toggle.enabled) { %>
+                <%- partial('_widget/style_toggle') %>
+            <% } %>
+        </div>
+    </div>
+    <%# Post %>
+    <div class="header-info">
+        <% if (is_post()) { %>
+            <span id="post-header-title"><%- page.title %></span>
+            <span id="post-header-date"><%- full_date(page.date, theme.date_format.post || config.date_format) %></span>
+            <% if (theme.word_count) { %>
+                <span id="post-header-word-count"><%- `${titlecase(__("word_count"))}: ${wordcount(page.content)}` %></span>
+            <% } %>
+            <%# Tags%>
+        <% } else if (is_tag()) { %>
+            <span class="header-title"><%- `${titlecase(__("tag"))}: #${page.tag}` %></span>
+        <% } else if (is_archive()) { %>
+            <span class="header-title"><%- `${titlecase(__("archive"))} ${page.year ? ': ' + page.year : ''}` %></span>
+        <% } else if (is_category()) { %>
+            <span class="header-title"><%- `${titlecase(__("category"))}: ${page.category}` %></span>
+        <% } else if (is_page()) { %>
+            <% let title;
+                if (is_current(url_for(theme.nav.categories.url))) {
+                    title = titlecase(__("category"));
+                } else if (is_current(url_for(theme.nav.tags.url))) {
+                    title = titlecase(__("tag"));
+                } else if (is_current(url_for(theme.nav.friends.url))) {
+                    title = titlecase(__("friend"));
+                } else if (is_current(url_for(theme.nav.about.url))) {
+                    title = titlecase(__("about"));
+                } %>
+            <span class="header-title"><%- title || titlecase(page.title) %></span>
+        <% } else { %>
+            <a id="home-header-title" href=<%- config.root %>><%- theme.title || config.title %></a>
+            <span id="home-header-subtitle"><%- theme.subtitle || config.subtitle %></span>
+        <% } %>
+    </div>
+</div>

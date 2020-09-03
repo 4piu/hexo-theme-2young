@@ -1,0 +1,8 @@
+<% if (page.total > 1 || !theme.paginator.hide_on_one_page) { %>
+    <nav id="paginator">
+        <%- paginator({
+            prev_text: theme.paginator.prev_text || titlecase(__("prev_text")),
+            next_text: theme.paginator.next_text || titlecase(__("next_text"))
+        }) %>
+    </nav>
+<% } %>
