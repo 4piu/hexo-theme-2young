@@ -17,7 +17,9 @@
  In hexo blog directory:
  ```shell script
  git clone --depth 1 https://github.com/nobody-65534/hexo-theme-2young.git themes/2young
- ```
+ 
+ mv themes/2young/_config.example.yml _config.yml
+```
  
  In `_config.yml`:
  ```yaml
@@ -36,5 +38,5 @@ highlight:
  - [ ] Custom header image for post
  - [ ] Clean up the style sh*t
  - [ ] CDN failover
- - [ ] Webpackify
-     - [ ] Babel JS
+ - [x] Gulpify
+     - [x] Babel JS
