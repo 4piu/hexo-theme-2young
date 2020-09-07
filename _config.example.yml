@@ -104,7 +104,7 @@ sidebar:
     enabled: true # show author profile card
     name: # default to config.author
     bio: "*A newbie learns to code.* __Lorem ipsum__ dolor sit amet, [consectetur adipiscing](//hexo.io) elit. Sed elit felis, placerat sit amet nisl eu, viverra posuere nisl. " # default to config.description, markdown supported
-    avatar: "assets/avatar.jpg" # default to gravatar, then assets/avatar.jpg
+    avatar: "assets/avatar.webp" # default to gravatar, then assets/avatar.webp
 
   tag:
     enabled: true # show tag list
