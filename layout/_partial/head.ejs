@@ -9,17 +9,15 @@
     <% if (theme.manifest) { %>
         <link rel="manifest" href="<%- url_for(theme.manifest) %>">
     <% } %>
+    <%- css("css/style-bf2a9b604a.css") %>
     <%- partial("_widget/analytics") %>
     <% if (is_post()) { %>
-        <%- css("css/post-abff568d12.css") %>
         <% if (has_highlight(page.content)) { %>
             <link id="css-highlight-light" rel="preload" href="<%- url_for(theme.light.code_highlight_css) %>"
                   as="style" onload="this.rel='stylesheet'">
             <link id="css-highlight-dark" rel="preload" href="<%- url_for(theme.dark.code_highlight_css) %>" as="style"
                   onload="this.rel='stylesheet'">
         <% } %>
-    <% } else { %>
-        <%- css("css/layout-5308aa4f86.css") %>
     <% } %>
     <%- js("js/main-b4890f5868.js") %>
     <%

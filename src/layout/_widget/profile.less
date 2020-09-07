@@ -1,0 +1,47 @@
+#widget-profile {
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    align-self: center;
+  }
+
+  img#profile-avatar {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  #profile-name {
+    margin: 2rem 0;
+    font-size: x-large;
+    font-weight: bold;
+  }
+
+  #profile-bio {
+    line-height: 1.5;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  hr {
+    width: 100%;
+    margin: 1rem 0;
+    opacity: .3;
+  }
+
+  .social-list {
+    font-size: x-large;
+    line-height: 1.5;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+
+    a {
+      color: inherit;
+    }
+  }
+}

@@ -1,16 +1,6 @@
  # 2 Young
  
  A not so special blog theme for [Hexo](//hexo.io)
-
- ## Features
-
-* Responsive (>320px)
-* Switch light/dark theme on the fly
-* RTL support
-* Post comment (Disqus)
-* Post outdate warning
-* Copyright claim
-* Analytics (Google)
  
  ## Installation
  
@@ -21,7 +11,7 @@
  mv themes/2young/_config.example.yml _config.yml
 ```
  
- In `_config.yml`:
+ In `_config.yml` of hexo:
  ```yaml
 theme: 2young
 
@@ -32,9 +22,10 @@ highlight:
  
  ## TODO
  
+ - [ ] Apostrophe
  - [ ] Add more comment provider
  - [ ] Add more analytics provider
- - [ ] TOC follow page scroll
+ - [x] TOC follow page scroll
  - [ ] Custom header image for post
  - [ ] Clean up the style sh*t
  - [ ] CDN failover
