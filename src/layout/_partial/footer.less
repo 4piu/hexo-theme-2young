@@ -1,0 +1,35 @@
+footer#footer {
+  .no-select;
+
+  .social-list {
+    display: flex;
+    font-size: xx-large;
+    margin: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+      color: inherit;
+      margin: .5rem;
+      transition: filter .3s, transform .3s;
+
+      &:hover {
+        filter: drop-shadow(0 0 6px);
+        transform: scale(1.1);
+      }
+
+      @media @mobile {
+        margin: .3rem;
+        font-size: x-large;
+      }
+    }
+  }
+
+  #footer-signature {
+    margin: 1rem;
+
+    a {
+      color: inherit;
+    }
+  }
+}

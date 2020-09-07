@@ -2,6 +2,7 @@ const del = require("del");
 const {series, parallel, src, dest, watch} = require("gulp");
 const babel = require("gulp-babel");
 const less = require("gulp-less");
+const lessGlob = require("less-plugin-glob");
 const uglify = require("gulp-uglify");
 const rev = require("gulp-rev");
 const revRewrite = require("gulp-rev-rewrite");
@@ -11,8 +12,10 @@ const cleanCSS = require("gulp-clean-css");
 const webp = require("gulp-webp");
 
 const cssCompile = () => {
-    return src("src/layout/**/*.less")
-        .pipe(less())
+    return src("src/layout/style.less")
+        .pipe(less({
+            plugins: [lessGlob]
+        }))
         .pipe(cleanCSS())
         .pipe(dest("source/css/"));
 };

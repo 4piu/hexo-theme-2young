@@ -1,0 +1,32 @@
+nav#paginator {
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  margin: 2rem 0;
+  text-align: center;
+
+  & > * {
+    text-decoration: none;
+    color: inherit;
+    min-width: 2rem;
+  }
+
+  .extend, .page-number:not(.current) {
+    transition: color .3s;
+
+    .color-main-dimmed;
+
+    &:hover {
+      .color-main;
+    }
+  }
+
+  .space {
+    cursor: default;
+  }
+
+  .page-number.current {
+    cursor: default;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,28 @@
+.tag-list {
+  display: block;
+  margin: 1rem;
+  padding-inline-start: 0;
+
+.tag-list-item {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 1rem 0;
+    word-break: break-word;
+
+    .tag-list-count {
+      font-size: small;
+      padding: .1rem;
+      border-radius: .2rem;
+      vertical-align: baseline;
+      background: rgba(180, 180, 180, 0.2);
+
+      @{rtl} & {
+        left: 0;
+        right: unset;
+      }
+
+      .color-foreground-dimmed;
+    }
+  }
+}

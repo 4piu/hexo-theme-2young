@@ -1,8 +1,4 @@
-// post/page content style sheet
-
-@import "layout.less";
-
-#header {
+#header.post-header {
   .header-info {
     padding: 0 2rem 1rem 2rem !important;
     cursor: default;
@@ -25,7 +21,7 @@
   }
 }
 
-#content-wrap {
+#content-wrap.post-wrap {
   max-width: 1024px !important;
 }
 
@@ -180,92 +176,5 @@
     mark {
       background: rgba(255, 255, 0, .5);
     }
-  }
-}
-
-#post-paginator {
-  display: flex;
-  margin: 2rem 1rem;
-  font-size: large;
-
-  .color-main-dimmed;
-
-  & > *:hover {
-    .color-main;
-  }
-
-  & > * {
-    color: inherit;
-    transition: color .3s;
-  }
-
-  .nav-arrow {
-    font-size: x-large;
-  }
-
-  #nav-post-prev {
-    margin-right: auto;
-    text-decoration: none;
-    text-align: left;
-
-    @{rtl} & {
-      margin-left: auto;
-      margin-right: unset;
-      text-align: right;
-    }
-  }
-
-  #nav-post-next {
-    margin-left: auto;
-    text-decoration: none;
-    text-align: right;
-
-    @{rtl} & {
-      margin-left: unset;
-      margin-right: auto;
-      text-align: left;
-    }
-  }
-}
-
-#outdated-warning {
-  font-size: small;
-  color: #e3af00;
-  background: rgba(255, 214, 0, .1);
-  border: solid 2px #e3af00;
-  border-radius: 1rem;
-  padding: .5rem;
-  margin-bottom: 2rem;
-}
-
-#widget-toc {
-  position: sticky;
-  top: 1rem;
-  line-height: 1.5;
-
-  ol {
-    list-style: none;
-    padding-inline-start: .5rem;
-  }
-
-  li {
-    display: block;
-  }
-}
-
-#copyright-warning {
-  font-size: small;
-  color: #e3af00;
-  background: rgba(255, 214, 0, .1);
-  border: solid 2px #e3af00;
-  border-radius: 1rem;
-  padding: .5rem;
-  margin-top: 4rem;
-}
-
-#post-gallery {
-  img {
-    width: 100%;
-    padding: 1rem;
   }
 }
